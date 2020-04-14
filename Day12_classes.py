@@ -3,7 +3,6 @@ class Moon:
         self.pos = position
         self.vel = velocity
 
-
 class Vector:
     def __init__(self, x, y, z):
         self.x = x
@@ -12,3 +11,6 @@ class Vector:
 
     def __add__(self, other):
         return Vector(self.x + other.x, self.y + other.y, self.z + other.z)
+
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y and self.z == other.z
